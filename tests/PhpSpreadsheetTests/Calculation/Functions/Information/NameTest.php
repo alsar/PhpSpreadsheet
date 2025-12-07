@@ -1,0 +1,15 @@
+<?php
+
+namespace PhpSpreadsheetTests\Calculation\Functions\Information;
+
+use PhpSpreadsheet\Calculation\Information\ExcelError;
+use PHPUnit\Framework\TestCase;
+
+class NameTest extends TestCase
+{
+    public function testNAME(): void
+    {
+        $result = ExcelError::NAME();
+        self::assertEquals('#NAME?', $result);
+    }
+}
